@@ -1,5 +1,14 @@
-@use './var' as var;
+@use './var' as *;
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	font-family: $font-family;
+	scroll-behavior: smooth;
+}
 
 body {
-	background-color: var.$color-black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-navy-950;
 }
