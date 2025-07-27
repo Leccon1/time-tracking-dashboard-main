@@ -55,6 +55,23 @@
 	}
 	&__previous-value {
 	}
-}
-.card--work {
+
+	&--work {
+		background-color: $color-orange-300;
+	}
+	&--play {
+		background-color: $color-blue-300;
+	}
+	&--study {
+		background-color: $color-pink-400;
+	}
+	&--exercise {
+		background-color: $color-green-400;
+	}
+	&--social {
+		background-color: $color-purple-700;
+	}
+	&--self-care {
+		background-color: $color-yellow-300;
+	}
 }
