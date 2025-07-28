@@ -75,15 +75,11 @@
 		}
 	}
 	&__item {
-		/* opacity: 0; */
 		padding: rem(5);
 		transition: opacity $transition-fast;
 
 		@include mobile {
 			padding: 0;
-		}
-		&:hover {
-			opacity: 1;
 		}
 	}
 	&__button {
@@ -92,11 +88,14 @@
 		font-weight: $font-weight-medium;
 		transition: color $transition-fast;
 
-		@include mobile {
-			font-size: rem(16);
-		}
 		&--active {
 			color: $color-white;
+		}
+		&:hover:active {
+			color: $color-orange-300;
+		}
+		@include mobile {
+			font-size: rem(16);
 		}
 		@include hover {
 			color: $color-white;
