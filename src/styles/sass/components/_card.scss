@@ -22,9 +22,19 @@
 		position: relative;
 		background-color: $color-navy-900;
 		height: 120px;
+		cursor: pointer;
 		padding: rem(20);
 		border-radius: 10px;
 		z-index: 10;
+		transform-origin: bottom;
+		transition: all $transition-normal;
+
+		@include mobile-above {
+			@include hover {
+				background-color: rgb(57, 62, 124);
+				transform: scaleY(1.1);
+			}
+		}
 	}
 	&__header {
 		display: flex;
@@ -35,14 +45,28 @@
 	&__title {
 		font-size: rem(12);
 		font-weight: $font-weight-normal;
+
+		@include mobile {
+			font-size: rem(14);
+		}
 	}
 	&__button {
 		width: rem(15);
+
+		@include mobile {
+			width: rem(20);
+		}
 	}
 	&__stats {
 		display: flex;
 		flex-direction: column;
 		gap: rem(5);
+
+		@include mobile {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 	&__hours {
 		font-size: rem(34);
@@ -52,8 +76,10 @@
 		color: $color-navy-200;
 		font-size: rem(10);
 		font-weight: $font-weight-light;
-	}
-	&__previous-value {
+
+		@include mobile {
+			font-size: rem(14);
+		}
 	}
 
 	&--work {
